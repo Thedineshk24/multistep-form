@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -8,29 +8,32 @@ import PlanningMessage from './PlanningMessage';
 
 const CardComp = ({ imgUrl, title, description }) => {
     return (
-                <Card sx={{ minWidth: 275, minHeight: 300 }}>
-                    <CardContent>
-                        <Typography sx={{ fontSize: 10 }} color="text.secondary" gutterBottom>
-                            <img src={imgUrl} alt="cutshort" />
-                        </Typography>
-                        <Typography variant="h5" component="div">
-                            {title}
-                        </Typography>
-                        {description}
-                    </CardContent>
-                </Card>
+        <Card sx={{ minWidth: 275, minHeight: 300 }}>
+            <CardContent>
+                <Typography sx={{ fontSize: 10 }} color="text.secondary" gutterBottom>
+                    <img src={imgUrl} alt="cutshort" />
+                </Typography>
+                <Typography variant="h5" component="div">
+                    {title}
+                </Typography>
+                {description}
+            </CardContent>
+        </Card>
     )
 }
 export default function OnBoardCards() {
-    const [size, setSize] = React.useState("row");
-    
+    const [size, setSize] = useState("row");
+
     let width = window.innerWidth;
 
-    if(width <= 900){
-        setSize("column");
-    }else{
-        setSize("row");
-    }
+    useEffect(() => {
+        if (width <= 900) {
+            setSize("column");
+        } else {
+            setSize("row");
+        }
+    }, [width, size]);
+    
     return (
         <Box sx={{ flexGrow: 1 }}>
             <PlanningMessage />
