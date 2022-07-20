@@ -79,7 +79,7 @@ export default function MultiStepper() {
                         >
                             Back
                         </Button>
-                        <Button variant="outlined" color='primary' onClick={handleNext} sx={{margin : "0 auto",width: "300px",backgroundColor: "#654DE4", color: "black"}} >
+                        <Button className="btn" variant="outlined" color='primary' onClick={handleNext} sx={{margin : "0 auto",width: "300px",backgroundColor: "#654DE4", color: "black"}} >
                             {activeStep === steps.length - 1 ? 'Launch Cutshort' : activeButtonName(activeStep)}
                         </Button>
                     </Box>
