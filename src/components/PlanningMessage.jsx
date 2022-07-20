@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import "../styles/message.css";
 
 const PlanningMessage = () => {
   return (
-    <div>
+    <div className="msg">
       <center>
         <h1>How are you planning to use Cutshort?</h1>
         <p>We'll streamline your setup experience accordingly.</p>

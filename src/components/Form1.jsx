@@ -1,24 +1,16 @@
-import React from 'react'
-import Autocomplete from '@mui/material/Autocomplete';
-import { TextField } from '@mui/material';
+import React from 'react';
+import TextField from '@mui/material/TextField';
 import WelcomeMessage from './WelcomeMessage';
 const Form1 = () => {
     return (
         <div>
             <WelcomeMessage />
-            <Autocomplete
-                id="free-solo-demo"
-                freeSolo
-                options={["Dinesh"]}
-                renderInput={(params) => <TextField {...params} label="Full Name" placeholder="Dinesh Katariya" />}
-            />
+            <label>Full Name</label>
+            <TextField fullWidth label="Full Name" placeholder='Dinesh Katariya' />
             <br />
-            <Autocomplete
-                id="free-solo-demo"
-                freeSolo
-                options={[]}
-                renderInput={(params) => <TextField {...params} label="DisPlay Name" placeholder="Dinesh" />}
-            />
+            <br />
+            <label>Display Name</label>
+            <TextField fullWidth label="Display Name" placeholder='Dinesh' />
         </div>
     )
 }

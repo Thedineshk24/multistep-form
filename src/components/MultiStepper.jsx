@@ -14,10 +14,6 @@ export default function MultiStepper() {
     const [activeStep, setActiveStep] = useState(0);
     const [skipped, setSkipped] = useState(new Set());
 
-    const isStepOptional = (step) => {
-        return step === 1;
-    };
-
     const isStepSkipped = (step) => {
         return skipped.has(step);
     };
@@ -31,10 +27,6 @@ export default function MultiStepper() {
 
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
         setSkipped(newSkipped);
-    };
-
-    const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
     const handleReset = () => {
@@ -70,15 +62,7 @@ export default function MultiStepper() {
                    {
                           activeStepRender(activeStep)
                    }
-                    <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-                        <Button
-                            color="inherit"
-                            disabled={activeStep === 0}
-                            onClick={handleBack}
-                            sx={{ mr: 1 }}
-                        >
-                            Back
-                        </Button>
+                    <Box sx={{ display: 'flex', justifyContent : "center",flexDirection: 'row', pt: 2 }}>
                         <Button className="btn" variant="outlined" color='primary' onClick={handleNext} sx={{margin : "0 auto",width: "300px",backgroundColor: "#654DE4", color: "black"}} >
                             {activeStep === steps.length - 1 ? 'Launch Cutshort' : activeButtonName(activeStep)}
                         </Button>

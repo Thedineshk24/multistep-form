@@ -1,9 +1,10 @@
 import React from 'react'
+import "../styles/message.css";
 
 const Congratulations = ({ username = "Dinesh" }) => {
   return (
-    <div>
-      <div className="icon">
+    <div className='msg'>
+      <div>
         <center style={{marginTop : "20px"}}>
           <span style={{backgroundColor: "#654DE4", borderRadius :"50%", padding : "10px"}}>✓</span>
         </center>

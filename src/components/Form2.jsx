@@ -1,24 +1,18 @@
 import React from 'react'
 import Autocomplete from '@mui/material/Autocomplete';
-import { TextField } from '@mui/material';
+import TextField from '@mui/material/TextField';
+
 import HomeMessage from './HomeMessage';
 const Form2 = () => {
     return (
         <div>
             <HomeMessage />
-            <Autocomplete
-                id="free-solo-demo"
-                freeSolo
-                options={[]}
-                renderInput={(params) => <TextField type="website" {...params} label="Workspace Name" placeholder="Dinesh Katariya" />}
-            />
+            <label>Workspace Name</label>
+            <TextField fullWidth label="Workspace Name" placeholder='Dinesh' />
             <br />
-            <Autocomplete
-                id="free-solo-demo"
-                freeSolo
-                options={[]}
-                renderInput={(params) => <TextField {...params} label="Workspace Url" placeholder="https://cutshort.io/" />}
-            />
+            <br />
+            <label>Workspace URL</label>
+            <TextField fullWidth label="Workspace URL" placeholder='https://cutshort.io/' />
         </div>
     )
 }
