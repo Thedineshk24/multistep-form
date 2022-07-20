@@ -8,12 +8,12 @@ import PlanningMessage from './PlanningMessage';
 
 const CardComp = ({ imgUrl, title, description }) => {
     return (
-        <Card sx={{ minWidth: 275 }} >
+        <Card sx={{ minWidth: 275, minHeight: 300 }} >
             <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                <Typography sx={{ fontSize: 10 }} color="text.secondary" gutterBottom>
                     <img src={imgUrl} alt="cutshort" />
                 </Typography>
-                <Typography variant="h4" component="div">
+                <Typography variant="h5" component="div">
                     {title}
                 </Typography>
                 {description}
