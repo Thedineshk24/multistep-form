@@ -5,9 +5,11 @@ import MyErrorBoundary from './ErrorBoundry/MyErrorBoundry';
 
 function App() {
   return (
-    <MyErrorBoundary>
-      <MultiStepper />
-    </MyErrorBoundary>
+    <div className="App">
+      <MyErrorBoundary>
+        <MultiStepper />
+      </MyErrorBoundary>
+    </div>
   );
 }
 
