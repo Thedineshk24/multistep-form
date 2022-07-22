@@ -35,7 +35,9 @@ export default function MultiStepper() {
 
     return (
         <Box className="steps">
-            <img className="logo" src="https://cdn.cutshort.io/public/images/new_logo_full.png" alt="cutshort logo" />
+            <center>
+                <img className="logo" src="https://cdn.cutshort.io/public/images/new_logo_full.png" alt="cutshort logo" />
+            </center>
             <Stepper activeStep={activeStep} className="spaces">
                 {steps.map((label, index) => {
                     const stepProps = {};
@@ -59,11 +61,11 @@ export default function MultiStepper() {
                 </React.Fragment>
             ) : (
                 <React.Fragment>
-                   {
-                          activeStepRender(activeStep)
-                   }
-                    <Box sx={{ display: 'flex', justifyContent : "center",flexDirection: 'row', pt: 2 }}>
-                        <Button className="btn" variant="outlined" color='primary' onClick={handleNext} sx={{margin : "0 auto",width: "300px",backgroundColor: "#654DE4", color: "black"}} >
+                    {
+                        activeStepRender(activeStep)
+                    }
+                    <Box sx={{ display: 'flex', justifyContent: "center", flexDirection: 'row', pt: 2 }}>
+                        <Button className="btn" variant="outlined" color='primary' onClick={handleNext} sx={{ margin: "0 auto", width: "300px", backgroundColor: "#654DE4", color: "black" }} >
                             {activeStep === steps.length - 1 ? 'Launch Cutshort' : activeButtonName(activeStep)}
                         </Button>
                     </Box>
