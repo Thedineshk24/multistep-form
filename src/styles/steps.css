@@ -13,8 +13,6 @@
 .logo {
     width: 100px;
     margin-top: 10vh;
-    /* position: absolute;
-    left: 20vw; */
 }
 
 /* Media queries */
@@ -24,10 +22,6 @@
         width: 100vw;
         margin: 0 10px;
     }
-/* 
-    .logo {
-        left: 26vw;
-    } */
 }
 
 @media screen and (max-width: 540px) and (min-width: 321px) {
@@ -35,10 +29,6 @@
         width: 100vw;
         margin: 0 10px;
     }
-/* 
-    .logo {
-        left: 32vw;
-    } */
 }
 
 @media screen and (max-width: 767px) and (min-width: 541px) {
@@ -46,10 +36,6 @@
         width: 100vw;
         margin: 0 10px;
     }
-
-    /* .logo {
-        left: 39vw;
-    } */
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
@@ -57,10 +43,6 @@
         width: 100vw;
         margin: 0 10px;
     }
-
-    /* .logo {
-        left: 40vw;
-    } */
 }
 
 @media screen and (max-width: 1023px) and (min-width: 992px) {
@@ -68,10 +50,6 @@
         width: 100vw;
         margin: 0 10px;
     }
-
-    /* .logo {
-        left: 36vw;
-    } */
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1024px) {}
